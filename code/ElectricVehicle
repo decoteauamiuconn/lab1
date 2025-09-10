@@ -2,6 +2,8 @@
 // distance traveled
 // kWh / MPGe capacity
 
+package code;
+
 public interface ElectricVehicle {
     void chargeBattery();
     int getBatteryLevel();

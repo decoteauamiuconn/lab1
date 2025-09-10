@@ -1,4 +1,4 @@
-// i found that "package c;", written at the top of the example files, is not used for importing but grouping like files. i will forgo it and create folders manually instead.
+package code;
 
 public class HybridVehicle implements GasVehicle, ElectricVehicle {  
 

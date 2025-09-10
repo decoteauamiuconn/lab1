@@ -2,6 +2,8 @@
 // gasoline / MPG capacity
 // distance traveled
 
+package code;
+
 public interface GasVehicle {
 
     void refuel();
