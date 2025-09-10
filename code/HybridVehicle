@@ -1,0 +1,77 @@
+// i found that "package c;", written at the top of the example files, is not used for importing but grouping like files. i will forgo it and create folders manually instead.
+
+public class HybridVehicle implements GasVehicle, ElectricVehicle {  
+
+// as a class and not an interface, all methods contain the body for the ones defined previously
+
+	private int batteryLevel;
+	private int fuelLevel; //xpressed as a percentage, not number of gallons
+	private int milesTraveled; //default 0
+    
+    // originally set default values for these, but realize the user will set them as arguments when an instance is built
+
+public Hybrid(int batteryLevel, int fuelLevel) {
+        this.batteryLevel = batteryLevel; 
+        this.fuelLevel = fuelLevel;
+    }
+
+    public void setMilesTraveled(int miles) {
+        this.milesTraveled = miles;
+    }
+
+    public int getMilesTraveled() {
+        return milesTraveled;
+    }
+
+    public int getMilesPerGallon(gallonsUsed) { //calcMPG
+        return milesTraveled / gallonsUsed();
+    }
+
+    public int calcMPGe(kWhUsed) { 
+        return milesTraveled / kWhUsed();
+    }
+
+    //Assuming gasoline costs $3.50/gallon and 1 kWh costs $0.24.
+//As an example, suppose in fully electric mode, your car travels 300 miles using 70 kWh.
+//The MPGe is computed as 300 miles/ 70 kWh x 33.7 kWh / 1 gallon = 144.43 MPGe
+
+
+//void setGallonsfromGas(); //now irrelevant, as as tank capacity is a percentage
+
+
+    @Override
+    public void chargeBattery() {
+        batteryLevel = 100;
+        System.out.println("Battery fully charged."); //example code includes print
+    }
+
+    @Override
+    public int getBatteryLevel() {
+        return batteryLevel;
+    }
+
+    @Override
+    public void refuel() {
+        fuelLevel = 100;
+        System.out.println("Fuel tank full."); //example code includes print
+    }
+
+    @Override
+    public int getFuelLevel() {
+        return fuelLevel;
+    }
+}
+
+//A main class CarRunner should instantiate a HybridVehicle class instance. The CarRunner
+//should calculate the following examples:
+//1. The MPG when in fully gas mode ()
+//2. The MPGe when in fully electric mode
+//3. The average MPG (MPG + MPGe)/2 when in half-gas/half-electric hybrid mode
+
+public class CarRunner() {
+    private HybridVehicle car(100, 100);
+
+    setMilesTraveled(300);
+    getMilesPerGallon(1)
+    calcMPGe(70);
+}

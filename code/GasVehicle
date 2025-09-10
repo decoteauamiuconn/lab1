@@ -1,0 +1,16 @@
+//price of gaoline per gallon
+// gasoline / MPG capacity
+// distance traveled
+
+public interface GasVehicle {
+
+    void refuel();
+    int getFuelLevel();
+
+// as an interface and not a class, the methods won’t contain a body
+// formed from Lab1 instructions
+	double calcgasMPG(); //calculate fuel needed to travel x miles on MPG (variable)
+	void setMilesfromGas(); //set a value for MPG; overwrite
+	void setGallonsfromGas(); //set a value for gallons the car can hold
+    //^ more unused methods; in example, but not sample code
+}

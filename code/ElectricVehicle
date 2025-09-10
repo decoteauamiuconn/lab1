@@ -1,0 +1,10 @@
+// price of energy per kWh
+// distance traveled
+// kWh / MPGe capacity
+
+public interface ElectricVehicle {
+    void chargeBattery();
+    int getBatteryLevel();
+    double calcMPGe(); //calculate fuel needed to travel x miles on MPGe (variable
+	void setTotalkWh();
+}

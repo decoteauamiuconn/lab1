@@ -1,0 +1,49 @@
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
+
+import HybridVehicle;
+
+public class HybridTest {
+    private HybridVehicle hv;
+
+    @Before
+    public void setUp() { // 
+        hv = new HybridVehicle(50, 50, 0);
+    }
+// realized starting values should be <100 to test recharge/fuel functions
+    @Test
+    public void testinitial() {
+        assertEquals(50, hv.getBatteryLevel());
+        assertEquals(50, hv.getFuelLevel());
+    }
+
+    @Test
+    public void testGetBatteryLevel() {
+        assertEquals(50, hv.getBatteryLevel());
+    }
+
+    @Test
+    public void testChargeBattery() {
+        hv.chargeBattery();
+        assertEquals(100, hv.getBatteryLevel());
+    }
+
+    @Test
+    public void testGetFuelLevel() {
+        assertEquals(50, hv.getFuelLevel());
+        hv.refuel();
+    }
+
+    @Test
+    public void testRefuel() {
+        assertEquals(100, hv.getFuelLevel());
+    }
+
+
+}
+
